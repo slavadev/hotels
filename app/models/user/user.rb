@@ -8,8 +8,10 @@
 #  [Time]              created_at
 #  [Time]              updated_at
 #  [User::Token][]     tokens
+#  [Hotel::Booking][]  bookings
 class User::User < ApplicationRecord
   has_many :tokens, class_name: 'User::Token'
+  has_many :bookings, class_name: 'Hotel::Booking'
 
   attr_accessor :password
 
