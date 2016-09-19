@@ -6,6 +6,8 @@ class Hotel::HotelIndexCommandTest < ActiveSupport::TestCase
     command = Hotel::HotelIndexCommand.new({})
 
     # action
+    command.check_authorization
+    command.check_validation
     result = command.execute
 
     # check results
