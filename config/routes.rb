@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope '/api/v1' do
+    namespace :user do
+      post '/register' => 'user#register'
+      post '/login' => 'user#login'
+    end
+    scope module: 'hotel' do
+      resources :bookings, only: [:index, :create, :update, :show, :destroy]
+    end
+  end
 end
