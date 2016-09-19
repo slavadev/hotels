@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     end
     scope module: 'hotel' do
       get '/hotels' => 'hotels#index'
-      resources :bookings, only: [:index, :create, :update, :show, :destroy]
+      resources :bookings, only: [:index, :create, :destroy]
+      get '/bookings/my' => 'bookings#my'
+      get '/bookings/:user_id' => 'bookings#index'
     end
   end
 end
