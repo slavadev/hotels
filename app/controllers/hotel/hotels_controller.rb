@@ -1,9 +1,9 @@
 # Hotels controller
 class Hotel::HotelsController < Core::Controller
   # List of hotels
-  # @see Hotel::IndexCommand
+  # @see Hotel::HotelIndexCommand
   def index
-    command = Hotel::IndexCommand.new(params)
+    command = Hotel::HotelIndexCommand.new(params)
     run(command)
   end
 end

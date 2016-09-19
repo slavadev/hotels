@@ -3,7 +3,7 @@ require 'test_helper'
 class Hotel::HotelIndexCommandTest < ActiveSupport::TestCase
   test "index hotel command success" do
     # prepare
-    command = Hotel::IndexCommand.new({})
+    command = Hotel::HotelIndexCommand.new({})
 
     # action
     result = command.execute

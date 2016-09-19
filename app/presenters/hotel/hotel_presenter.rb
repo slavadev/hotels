@@ -1,7 +1,7 @@
 # Contains methods to show hotels
 class Hotel::HotelPresenter < Core::Presenter
   # Gets hash from a hotel
-  # @param [Event] hotel
+  # @param [Hotel::Hotel] hotel
   # @return [Hash]
   def hotel_to_hash(hotel)
     {
@@ -10,7 +10,7 @@ class Hotel::HotelPresenter < Core::Presenter
     }
   end
 
-  # Gets hash from an hotels
+  # Gets hash from hotels
   # @param [Array] hotels
   # @return [Hash]
   def hotels_to_hash(hotels)

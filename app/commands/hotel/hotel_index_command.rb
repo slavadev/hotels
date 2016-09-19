@@ -1,5 +1,5 @@
 # Index of hotels command
-class Hotel::IndexCommand < Core::Command
+class Hotel::HotelIndexCommand < Core::Command
   # Sets all variables
   # @param [Object] params
   # @see Hotel::HotelRepository
