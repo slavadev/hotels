@@ -6,9 +6,16 @@ class Hotel::BookingRepository < Core::Repository
     @model = Hotel::Booking
   end
 
-  # Finds all hotels
+  # Finds all not deleted bookings
   # @return [Array]
-  def find_all
-    @model.all
+  def find_all_not_deleted
+    @model.not_deleted
+  end
+
+  # Finds all not deleted bookings by user
+  # @param [Object] user
+  # @return [Array]
+  def find_all_not_deleted_by_user(user)
+    find_all_not_deleted.where(user: user)
   end
 end
