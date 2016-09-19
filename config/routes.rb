@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post '/login' => 'user#login'
     end
     scope module: 'hotel' do
+      get '/hotels' => 'hotels#index'
       resources :bookings, only: [:index, :create, :update, :show, :destroy]
     end
   end
