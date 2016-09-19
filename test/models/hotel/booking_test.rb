@@ -73,4 +73,21 @@ class Hotel::BookingTest < ActiveSupport::TestCase
     # check results
     assert booking.valid?
   end
+
+  test "booking create on the same date when one is deleted success" do
+    # prepare
+    user = User::User.first
+    hotel = Hotel::Hotel.first
+    date = Time.now.to_date
+    booking = Hotel::Booking.new(user, hotel, date)
+    booking.deleted_at = Time.now
+    booking.save
+
+    # action
+    booking = Hotel::Booking.new(user, hotel, date)
+    booking.save
+
+    # check results
+    assert booking.valid?
+  end
 end
