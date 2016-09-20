@@ -1,0 +1,23 @@
+<md-content layout="column"
+            layout-align="center center"
+            class="main">
+    <div layout="row">
+        <md-input-container class="md-block">
+            <label>Date</label>
+            <md-datepicker ng-model="addCtrl.date"
+                           md-open-on-focus></md-datepicker>
+        </md-input-container>
+        <div style="width: 50px">
+        </div>
+        <md-input-container class="md-block md-float-icon">
+            <label>Hotel</label>
+            <md-select ng-model="addCtrl.hotel_id">
+                <md-option ng-repeat="hotel in addCtrl.hotels" value="{{hotel.id}}">
+                    {{hotel.name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+    <md-button class="md-raised md-primary nomargin" ng-click="addCtrl.create()">Create</md-button>
+    <md-button ui-sref="index">Back</md-button>
+</md-content>

@@ -1,0 +1,22 @@
+body, html {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    min-height: 100%;
+}
+.ng-hide {
+    display: none;
+}
+.nomargin {
+    margin: 0;
+}
+.header {
+    width: 100%;
+}
+.card {
+    min-width: 400px;
+}

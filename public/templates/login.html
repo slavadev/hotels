@@ -1,0 +1,14 @@
+<md-content layout="column"
+            layout-align="center center"
+            class="main">
+    <md-input-container class="md-block nomargin">
+        <label>Email</label>
+        <input ng-model="loginCtrl.email" type="email" ng-pattern="/^.+@.+\..+$/">
+    </md-input-container>
+    <md-input-container class="md-block nomargin">
+        <label>Password</label>
+        <input ng-model="loginCtrl.password" type="password" minlength="6">
+    </md-input-container>
+    <md-button class="md-raised md-primary nomargin" ng-click="loginCtrl.login()">Login</md-button>
+    <md-button ng-click="loginCtrl.register()">Register</md-button>
+</md-content>

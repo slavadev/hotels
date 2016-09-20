@@ -9,7 +9,7 @@ class Hotel::BookingRepository < Core::Repository
   # Finds all not deleted bookings
   # @return [Array]
   def find_all_not_deleted
-    @model.not_deleted
+    @model.not_deleted.order(:date)
   end
 
   # Finds all not deleted bookings by user

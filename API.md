@@ -47,7 +47,7 @@ Response example:
 
 Checks presented email and password and returns a token if they are right.
 
-`` POST api.thatsaboy.com/v1/user/login ``
+`` POST /api/v1/user/login ``
 
 Parameters:
 
