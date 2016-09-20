@@ -138,7 +138,7 @@ Response example:
 
 Shows list of user bookings 
 
-`` GET /api/v1/hotels ``
+`` GET /api/v1/hotels/my ``
 
 Parameters:
 
